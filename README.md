@@ -54,5 +54,97 @@ Using the variables from above, we ran a Logistic Regression Model and utilized 
 
 Using a confusion matrix, we are able to visually see what our model is predicting with respects to true positives and false positives, which are what we need to calculate our precision score.
 
+# Third Model: Decision Tree Max Depth = 5
+
+To further iterate on our second model, we went back and decided to try finding what features were important if the decision tree went to a max depth of 5. Here, 14 features were deemed important and we attempted to run through through a logistic regression model afterwards.
+
+# Fourth Model: Logistic Regression Utilizing Results from Model 3
+
+Using a confusion matrix, we are able to visually see what our model is predicting with respects to true positives and false positives, which are what we need to calculate our precision score.
+
+However, when we analyzed the coefficients for this model it appeared that there were a number of coefficients that did not have a substantial impact on determining vaccine outcome. As such we wanted to create one more model.
+
+# Fifth Model: Decision Tree Max Depth = 3
+
+We wanted to try one more model utilizing a lower depth, since our previous decision tree yielded too many variables that did not have substantial impact on our target variable.
+
+Using a depth of 3 yielded four variables that were considered important: doctor_recc_h1n1,opinion_h1n1_risk, opinion_h1n1_vacc_effective, and X2_White.
+
+# Final Model: Logistic Regression
+
+Our final model was created using Logistic Regression and features found from our previous decision tree. The precision score obtained was 70%. From this model we were able to extract coefficients that gave us the log odds chances that an individaul would get the vaccine based on the features used for modeling.
+
+# Data Visuals Creation
+
+# Race vs. Vaccination Status
+
+These results show the vaccination rates through the race classes from the data we have. Here we have imbalanced survey results showing that the majority of the sample size being white (80%), and the rest being people of color (20%)
+
+# Doctor Recommendation vs. Vaccination Status
+
+These results show the vaccination rates for individuals if recommended by doctor. This shows the vaccination rates are significantly higher when recommended by a doctor.
+
+# Age Group vs. Vaccination Status
+
+This shows the vaccination rates broken down by age groups. This seems to be a balanced data distribution amongst the age groupings, and shows that as the age group increases, so does the vaccination rates.
+
+# Conclusion
+
+Based on the results of the National 2009 H1N1 Flu Survey and the ML models developed, it can be concluded that the models performed moderately well in predicting whether someone received the H1N1 vaccine. The precision score of 0.697 indicates that the models were able to correctly identify a significant proportion of those who received the vaccine. However, the models still had room for improvement, and further research can be conducted to enhance their accuracy. One limitation of the study is that it only considered data from a single year. Additionally, some of the data was unbalanced and were not as accurately depicted for in the models. Despite these limitations, the results of the study demonstrate the potential for ML models to aid in the prediction of vaccine uptake and inform public health interventions.
+
+# Recommendations
+
+-Focus on creating a marketing and outreach campaign that focuses more on communities predominantly with people of color.
+
+-Focus on creating a marketing and outreach campaign that is geared towards the 18-34 age group.
+
+-Emphasize the importance of doctors recommending the vaccine to their patients if they are an appropriate candidate.
+
+# Future Insights & Next Steps
+
+-Wanted to include data from other demographics as the dataset we used was not balanced.
+
+-Look at additional income levels for respondents since the majority class was 'Well Off'
+
+-Utilize survey data from the COVID pandemic to see if additional variables can be identified to help categorize if a respondent does get the vaccination.
+
+# Presentation is available as
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
