@@ -37,3 +37,22 @@ We then focused on employment_industry, employment_occupation, and hhs_geo_regio
 Then, we wanted to focus on health_insurance as we believed that this attribute would have had an impact on our model. We noted that there were a number of null values for this category and as such we also dropped the null values.
 
 The remaining categories had a few nulls that could not be iterated, and were dropped as well. This resulted in a dataset of 11,794 data points that we used for our model creation.
+
+# Modeling with the Dataset
+
+Before we started our modeling, we utilized One Hot Encoder in order to classify categorical data as numerical values. We then used StandardScaler in order to scale our values to an appropriate range.
+
+# First Simple Model: Decision Tree
+
+We created a decision tree with a max_depth set to 2, in order to identify which features have importance.
+
+These two variables were identified as doctor_recc_h1n1 and opinion_h1n1_risk.
+
+# Second Model: Logistic Regression Utilizing Results from Model 1
+
+Using the variables from above, we ran a Logistic Regression Model and utilized classification metrics to determine the precision of our model. We identified a precision of 66%.
+
+Using a confusion matrix, we are able to visually see what our model is predicting with respects to true positives and false positives, which are what we need to calculate our precision score.
+
+
+
